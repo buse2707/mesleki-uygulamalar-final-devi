@@ -1,0 +1,18 @@
+/* Harita sınıfı - Harita öğesinin genişliği ve yüksekliği ayarlanır */
+.harita {
+    width: 100%; /* Harita öğesinin genişliği, kapsayıcı öğesinin genişliğine uyacak şekilde 100% olarak ayarlanır */
+    height: 500px; /* Harita öğesinin yüksekliği 500px olarak sabitlenir */
+}
+
+/* Harita kapsayıcı sınıfı - Harita içeren kapsayıcı öğesinin stilini belirler */
+.harita-cont {
+    padding: 20px; /* Kapsayıcı öğenin etrafına 20px'lik iç boşluk ekler */
+    text-align: center; /* İçerikleri yatayda ortalar */
+}
+
+/* İletişim kutusu - İletişim kısmına ait kutu stilini belirler */
+.iletisim-kutu {
+    padding: 30px; /* Kutu içindeki tüm alanlara 30px'lik iç boşluk ekler */
+    width: 100%; /* Kutu öğesinin genişliğini %100 yaparak, bulunduğu alanı tamamen kaplamasını sağlar */
+    border: 5px inset rgb(100, 0, 0); /* Kutuya 5px kalınlığında kırmızımsı bir inset kenarlık ekler */
+}

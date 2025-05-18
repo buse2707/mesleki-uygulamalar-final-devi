@@ -1,0 +1,158 @@
+/* ============================= */
+/*         GENEL BÖLÜM          */
+/* ============================= */
+
+html {
+    scroll-behavior: smooth; /* Sayfa içi geçişlerde yumuşak kaydırma efekti sağlar */
+}
+
+body {
+    font-family: 'Merriweather', seri; /* Sayfa genelinde yazı tipi olarak Merriweather kullanılır (serif yerine seri yazılmış, düzeltmek gerekebilir) */
+    font-size: larger;  /* Yazı boyutu bir tık büyütülür */
+}
+
+.logo {
+    background-color: rgb(100, 0, 0); /* Logo arka plan rengi koyu kırmızı */
+    width: 125px; /* Logo genişliği */
+    border: 3px inset rgb(100, 0, 0); /* İçbükey kenarlık efekti verir */
+}
+
+/* ============================= */
+/*   EKRAN BOYUTU DÜZENLEMELERİ */
+/* ============================= */
+
+/* Küçük ekranlar için (maksimum 991.98px genişlik) */
+@media screen and (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 10px 0px; /* Menü açıldığında dikey boşluk */
+    }
+    .navbar {
+        padding: 50px; /* Navigasyon çubuğuna geniş iç boşluk */
+    }
+    .nav-link {
+        padding: 12px 0px; /* Menü öğeleri arasında dikey boşluk */
+    }
+    .nav-item {
+        padding: 0px 10px; /* Menü öğeleri arasında yatay boşluk */
+    }
+    .iletisim {
+        padding: 40px 50px 0px 50px; /* İletişim bölümüne boşluk */
+    }
+}
+
+/* Büyük ekranlar için (en az 992px genişlik) */
+@media screen and (min-width: 992px) {
+    .navbar {
+        padding: 10px; /* Navigasyon çubuğuna daha az iç boşluk */
+    }
+    .nav-link {
+        margin: 0px 0.75vw; /* Menü öğeleri arasında oranlı boşluk */
+    }
+    .navbar-nav {
+        margin-left: 20px; /* Menü öğelerini biraz sağa kaydırır */
+    }
+    .iletisim {
+        padding: 40px 30px 0px 30px; /* İletişim bölümüne boşluk */
+    }
+}
+
+/* ============================= */
+/*        NAVİGASYON BAR         */
+/* ============================= */
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Üstüne gelindiğinde alt menüyü gösterir */
+    margin-top: 0; /* Menü ile düğme arasında boşluk kalmaması için */
+}
+
+.dropdown-item:hover {
+    color: rgb(100, 0, 0); /* Menü öğesinin üzerine gelindiğinde renk değişir */
+}
+
+.dropdown-item:active {
+    background-color: rgb(100, 0, 0); /* Tıklanınca arka plan rengi koyu kırmızı olur */
+    color: whitesmoke; /* Yazı rengi açık renk olur */
+}
+
+.navbar-brand {
+    padding: 10px; /* Marka kısmına iç boşluk */
+}
+
+.navbar {
+    background-color: whitesmoke; /* Arka plan rengi açık gri */
+    padding: 0px 10px; /* Yatay iç boşluk */
+    border-bottom: 3px inset rgb(100, 0, 0); /* Alt kenarlık koyu kırmızı içbükey görünüm */
+}
+
+.nav-link {
+    font-size: 16px; /* Menü bağlantı yazı boyutu */
+    color: rgb(100, 0, 0); /* Koyu kırmızı renk */
+}
+
+/* ============================= */
+/*          FOOTER BÖLÜM         */
+/* ============================= */
+
+.iletisim {
+    justify-content: space-evenly; /* İçerikler arasında eşit boşluk bırakır */
+}
+
+.iletisim, .neresi {
+    background-position-y: 40%; /* Arka plan resmi dikeyde %40 hizalanır */
+    background-image: url('../img/9.jpg'); /* Arka plan resmi atanır */
+    background-repeat: no-repeat; /* Arka plan resmi tekrarlanmaz */
+    background-size: cover; /* Arka plan resmi tüm alanı kaplar */
+    padding-bottom: 40px; /* Alt boşluk */
+}
+
+.neresi {
+    align-content: center; /* İçerikler ortalanır */
+    text-align: center; /* Metinler ortalanır */
+    padding: 0 150px; /* Yatay boşluk */
+    min-height: 250px; /* En az yüksekliği 250px olur */
+    border-bottom: 3px inset rgb(100, 0, 0); /* Alt kenarlık içbükey koyu kırmızı */
+    color: whitesmoke; /* Yazı rengi açık renk */
+}
+
+.neresi span {
+    display: block; /* Span elemanlarını blok olarak gösterir */
+}
+
+.iletisim .metin, .iletisim p, .iletisim h4, .iletisim h6, .neresi span {
+    /* Koyu kırmızı kenarlıklı gölge efektiyle yazı vurgulanır */
+    text-shadow: 1px 0 rgb(100, 0, 0), -2px 0 rgb(100, 0, 0), 0 2px rgb(100, 0, 0), 0 -2px rgb(100, 0, 0),
+    1px 1px rgb(100, 0, 0), -1px -1px rgb(100, 0, 0), 1px -1px rgb(100, 0, 0), -1px 1px rgb(100, 0, 0);
+}
+
+.iletisim span, .iletisim i {
+    /* Açık renkli (beyazımsı) gölge efekti */
+    text-shadow: 1px 0 whitesmoke, -2px 0 whitesmoke, 0 2px whitesmoke, 0 -2px whitesmoke,
+    1px 1px whitesmoke, -1px -1px whitesmoke, 1px -1px whitesmoke, -1px 1px whitesmoke;
+}
+
+.material-symbols-outlined {
+    text-shadow: none; /* Gölge uygulanmaz */
+    padding-right: 5px;  /* Sağa boşluk */
+    scale: 1.2;  /* Boyutu %20 büyüt */
+    color: rgb(100, 0, 0); /* Koyu kırmızı renk */
+}
+
+i {
+    margin-right: 10px; /* Sağa boşluk */
+    color: rgb(100, 0, 0); /* Koyu kırmızı ikon rengi */
+}
+
+footer {
+    border-top: 3px inset rgb(100, 0, 0); /* Üst kenarlık içbükey kırmızı */
+    position: relative;
+    bottom: 0px;
+    background-color: rgb(100, 0, 0); /* Arka plan koyu kırmızı */
+    color: whitesmoke; /* Yazı rengi beyazımsı */
+    padding: 0;
+}
+
+.alt {
+    text-align: center; /* Ortalanmış metin */
+    position: relative;
+    padding: 20px 0px; /* Dikey boşluk */
+}

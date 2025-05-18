@@ -1,0 +1,110 @@
+/* EKRAN BOYUTU DÜZENLEMELERİ */
+
+/* 992px ve altındaki ekran boyutlarında uygulanacak stil */
+@media screen and (max-width: 991.98px) {
+    /* Kolonlar için margin değerini artırarak daha geniş aralıklar oluşturur */
+    .col-lg-6, .col-lg-7, .col-lg-5 {
+        margin: 25px;
+    }
+    /* Kartlar ve video metin öğelerine margin ekler */
+    .kartlar, .video-metin {
+        margin: 30px;
+    }
+    /* Ayetler için margin değerini ayarlar */
+    .ayet {
+        margin: 0px 40px 30px 40px;
+    }
+}
+
+/* 992px ve üzeri ekran boyutlarında uygulanacak stil */
+@media screen and (min-width: 992px) {
+    /* İki sütunlu düzenleme için grid-template-columns ile 2 eşit kolon yapar */
+    .sutun-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    /* Kartlar ve video metin öğelerine daha büyük margin ekler */
+    .kartlar, .video-metin {
+        margin: 80px 60px 80px 60px;
+    }
+    /* Ayetler için margin değerini artırır */
+    .ayet {
+        margin: 0px 80px 80px 80px;
+    }
+}
+
+/* KAROSEL */
+
+/* Carousel öğelerinin altına kırmızı renkli bir kenarlık ekler */
+.carousel {
+    border-bottom: 3px solid rgb(100, 0, 0);
+}
+
+/* Carousel öğelerinin arka planını tam ekran kaplayacak şekilde ayarlar */
+.carousel-item {
+    height: 100%;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+/* Firefox tarayıcısı için dönüşüm animasyonu ekler */
+.carousel-item {
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+/* SAYFADAKİ ANA İÇERİK  */
+
+/* İçerik satırları arasındaki boşluğu eşitler */
+.sutun-grid .row {
+    justify-content: space-evenly;
+}
+
+/* SAYFADAKİ ANA İÇERİK 1 */
+
+/* Video metin içindeki listeyi stilize eder, numarasız liste yapar */
+.video-metin ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Liste elemanlarının sol tarafına iç içe stil ekler */
+.video-metin li {
+    position: relative;
+    padding-left: 1.5em;
+}
+
+/* Liste elemanları öncesinde bir simge ekler */
+.video-metin li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    /* Font Awesome simgesini arka planda gösterir */
+    background: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d='M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM200 344l0-64-64 0c-13.3 0-24-10.7-24-24s10.7-24 24-24l64 0 0-64c0-13.3 10.7-24 24-24s24 10.7 24 24l0 64 64 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-64 0 0 64c0 13.3-10.7 24-24 24s-24-10.7-24-24z'/></svg>") no-repeat;
+}
+
+/* SAYFADAKİ ANA İÇERİK 2 - ŞUAN BELLİ DEĞİL NE KONUCAK  */
+
+/* Kartlar ve row öğeleri için padding sıfırlanır */
+.kartlar .row, .kartlar .col-lg-6 {
+    padding: 0px;
+}
+
+/* Kartlar için stil, hover efekti ile büyür */
+.card1, .card2 {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    transform: scale(0.95);
+    transition: ease-in-out 300ms;
+    /* Hover sırasında kartlar büyür */
+    &:hover {
+        transform: scale(1);
+    }
+}

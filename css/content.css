@@ -1,0 +1,79 @@
+/* EKRAN BOYUTU DÜZENLEMELERİ */
+
+/* Ekran genişliği 991.98px veya daha küçük olduğunda (mobil cihazlar) */
+@media screen and (max-width: 991.98px) {
+    .ana-metin {
+        width: 100%; /* Ana metin öğesinin genişliği, ekran boyutuna uyacak şekilde %100 olarak ayarlanır */
+    }
+}
+
+/* Ekran genişliği 992px veya daha büyük olduğunda (tablet ve masaüstü cihazlar) */
+@media screen and (min-width: 992px) {
+    .ana-metin {
+        width: 95%; /* Ana metin öğesinin genişliği %95'e ayarlanır, böylece ekranın etrafında biraz boşluk bırakılır */
+    }
+}
+
+/* Yan kutu içindeki içerik kutusuna stil ekler */
+.yan-kutu .container-fluid {
+    padding: 30px; /* İçeriğe 30px'lik iç boşluk ekler */
+    border: 5px inset rgb(100, 0, 0); /* Kutuya 5px kalınlığında kırmızımsı inset kenarlık ekler */
+}
+
+/* Ana metin kutusuna genel stil uygular */
+.ana-metin {
+    border: 5px inset rgb(100, 0, 0); /* Ana metin kutusuna kırmızımsı inset kenarlık ekler */
+    padding: 40px 30px; /* İçeriğe 40px üst-alt ve 30px sağ-sol boşluk ekler */
+    margin-right: 2.5%; /* Sağ taraftan %2.5 boşluk bırakır */
+}
+
+/* Ana metin ve yan kutudaki öğeler için alt padding uygular */
+.ana-metin p, .yan-kutu a {
+    padding-bottom: 15px; /* Alt kısma 15px'lik boşluk ekler */
+}
+
+/* İçeriğin dış boşluklarını düzenler */
+.content {
+    margin: 60px 0px 40px 0px; /* Üst kısma 60px, alt kısma 40px boşluk ekler */
+    padding: 0px 40px; /* Sağ ve sol kısımlara 40px'lik iç boşluk ekler */
+}
+
+/* İçeriğin her iki sütununa margin (boşluk) ekler */
+.content .col-lg-4, .content .col-lg-8 {
+    margin: 20px 0px; /* Üst ve alt kısımlara 20px boşluk ekler */
+}
+
+/* Yan kutudaki başlık stilini düzenler */
+.yan-kutu h2 {
+    padding-bottom: 10px; /* Alt kısmına 10px'lik boşluk ekler */
+    border-bottom: 3px inset rgb(100, 0, 0); /* Başlığın altına kırmızımsı inset kenarlık ekler */
+}
+
+/* Yan kutudaki bağlantılara stil ekler */
+.yan-kutu a {
+    height: min-content; /* Bağlantının yüksekliğini içeriğe uygun şekilde ayarlar */
+    margin-top: 15px; /* Üst tarafa 15px boşluk ekler */
+    display: block; /* Bağlantıyı blok elemanı olarak düzenler */
+    text-decoration: none; /* Bağlantı alt çizgisi kaldırılır */
+    &:hover {
+        color: rgb(100, 0, 0); /* Bağlantıya fareyle üzerine gelindiğinde renk değişir */
+    }
+}
+
+/* Yan kutudaki genel stil düzenlemeleri */
+.yan-kutu {
+    padding: 0px 20px 20px 20px; /* İçeriğe 20px sağ, sol ve alt boşluk ekler */
+}
+
+/* Yan kutudaki bağlantılar, ana metin paragrafı ve fotoğraf kutusundaki renk ve kenarlık düzenlemeleri */
+.yan-kutu a, .ana-metin p, .ana-metin .foto-container {
+    color: black; /* Metin rengini siyah yapar */
+    border-bottom: 3px inset whitesmoke; /* Alt kısıma ince beyaz kenarlık ekler */
+}
+
+/* Ana metin içindeki resimlere stil ekler */
+.ana-metin img {
+    border: 3px inset rgb(100, 0, 0); /* Resimlere kırmızımsı inset kenarlık ekler */
+    margin: 10px 0px; /* Üst ve alt kısımlara 10px boşluk ekler */
+    width: 100%; /* Resmin genişliğini %100 yapar */
+}
